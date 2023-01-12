@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script async src="https://api.countapi.xyz/hit/agunglbn.com/2d9df5d5-0c04-4499-8de8-13f103b4b630/?callback=websiteVisits"></script>
 
 </head>
 
@@ -48,9 +49,9 @@
           <a href="https://www.instagram.com/agunglbn/" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="https://www.linkedin.com/in/agung-ferdinan-ab8573233/" class="linkedin"><i
               class="bx bxl-linkedin"></i></a>
+
         </div>
       </div>
-
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
@@ -71,7 +72,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Agung Ferdinan</h1>
-      <p>I'M <span class="typed" data-typed-items="JUST A BEGINNER"></span></p>
+      <p>Hi !! <span class="typed" data-typed-items="Welcome,I'M JUST A BEGINNER"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -537,7 +538,12 @@
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p></p>
+                <p>0895----------</p>
+              </div>
+              <div class="phone">
+                <i class="bx bx-line-chart-down"></i>
+                <h4>Visits Website :</h4>
+              <strong><p id="visits"></p></strong> 
               </div>
 
 
@@ -562,6 +568,8 @@
       <div class="credits">
 
         by <a href="https://www.instagram.com/agunglbn/">Agung Ferdinan</a>
+       
+
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -582,7 +590,17 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+  const countEl = document.getElementById('visits');
 
+  function websiteVisits(){
+    fetch('https://api.countapi.xyz/update/agunglbn/webb/?amount=1')
+    .then(res => res.json())
+    .then(res=>{
+      countEl.innerHTML =res.value;
+    })
+  }
+</script>
 </body>
 
 </html>

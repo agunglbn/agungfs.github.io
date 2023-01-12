@@ -140,6 +140,7 @@
       backDelay: 2000
     });
   }
+ 
 
   /**
    * Skills animation
